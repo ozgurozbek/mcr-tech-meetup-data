@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Events Heatmap</title>
+    <link rel="stylesheet" href="leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+   	<script language="javascript"src="leaflet.js"></script>    
+    <script language="javascript" src="accidents.js"></script>
+    <script language="javascript" src="leaflet-heat.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="controllers">
+        <p>Select the radius... <input type="range" min="0" max="60" id="radius" onchange="updateRadius(this.value)" /></p>
+        <p>Select the blur... <input type="range" min="0" max="100" id="blur" onchange="updateBlur(this.value)" /></p>
+    </div>
+    <div id="map"></div>  
+</body>
+</html>
