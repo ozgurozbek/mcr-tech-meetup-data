@@ -22,4 +22,10 @@
     "link": "pages/venue-usage/index.html",
     "auth": "Sean O'Mahoney",
     "aURL": "https://twitter.com/Sean12697"
+}, {
+    "name": "RSVP Treemap",
+    "desc": "Visualizing the number of RSVPs Groups & Events have received.",
+    "link": "pages/rsvp-treemap/index.html",
+    "auth": "Sean O'Mahoney",
+    "aURL": "https://twitter.com/Sean12697"
 }]
