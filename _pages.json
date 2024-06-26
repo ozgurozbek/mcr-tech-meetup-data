@@ -11,6 +11,12 @@
     "auth": "Sean O'Mahoney",
     "aURL": "https://twitter.com/Sean12697"
 }, {
+    "name": "Event Heatmap Locations Timeline",
+    "desc": "Using LeafletJS to generate a heatmap to visualize the locations of meetup events.",
+    "link": "pages/meetup-heatmap-timeline/index.html",
+    "auth": "Sean O'Mahoney",
+    "aURL": "https://twitter.com/Sean12697"
+}, {
     "name": "Yearly Statistics Combo Chart",
     "desc": "Visualizing some core data throughout the years.",
     "link": "pages/yearly-stats-combo-chart/index.html",
