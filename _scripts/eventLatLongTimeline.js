@@ -4,22 +4,22 @@ module.exports = (groups, events, attendees) => {
 
     events.filter(e => e.id != "739637185").forEach(event => {
         if (event.venue) {
-            if (event.venue.lat && event.venue.lon) {
-                let eYear = event.local_date.substr(0,4), eYearMonth = event.local_date.substr(0,7);
+            if (event.venue.lat && (event.venue.lon || event.venue.lng)) {
+                let eYear = event.local_date.substr(0,4), eYearMonth = event.local_date.substr(0,7), coords = [event.venue.lat, lon = event.venue.lon || event.venue.lng];
 
                 if (year[eYear]) {
-                    year[eYear].push([event.venue.lat, event.venue.lon]);
+                    year[eYear].push(coords);
                 } else {
-                    year[eYear] = [[event.venue.lat, event.venue.lon]];
+                    year[eYear] = [coords];
                 }
 
                 if (yearMonth[eYearMonth]) {
-                    yearMonth[eYearMonth].push([event.venue.lat, event.venue.lon]);
+                    yearMonth[eYearMonth].push(coords);
                 } else {
-                    yearMonth[eYearMonth] = [[event.venue.lat, event.venue.lon]];
+                    yearMonth[eYearMonth] = [coords];
                 }
 
-                locations.all.push([event.venue.lat, event.venue.lon]);
+                locations.all.push(coords);
             }
         }
     });

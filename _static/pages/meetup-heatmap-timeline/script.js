@@ -31,6 +31,7 @@ function init(data) {
 
   layerGroup = L.layerGroup().addTo(map);
   heat = L.heatLayer(locations.all, { radiusVal, blurVal });
+  document.getElementById("eventsCount").innerText = `Events: ${locations.all.length}`;
   heat.addTo(layerGroup);
 }
 
@@ -56,9 +57,10 @@ function updateBlur(newBlur) {
 
 function updateYear(val) {
   layerGroup.clearLayers();
-  let yearValue = yearsArr[val];
+  let yearValue = yearsArr[val], data = getYearData(yearValue);
   document.getElementById("year").value = val;
-  heat = L.heatLayer(getYearData(yearValue), { radiusVal, blurVal });
+  heat = L.heatLayer(data, { radiusVal, blurVal });
+  document.getElementById("eventsCount").innerText = `Events: ${data.length}`;
   document.getElementById("yearText").innerText = yearValue;
   heat.addTo(layerGroup);
 }
@@ -66,9 +68,10 @@ function updateYear(val) {
 // To refactor into `updateYear()`
 function updateYearMonth(val) {
   layerGroup.clearLayers();
-  let yearMonthValue = yearMonthsArr[val];
+  let yearMonthValue = yearMonthsArr[val], data = getYearMonthData(yearMonthValue);
   document.getElementById("yearMonth").value = val;
-  heat = L.heatLayer(getYearMonthData(yearMonthValue), { radiusVal, blurVal });
+  heat = L.heatLayer(data, { radiusVal, blurVal });
+  document.getElementById("eventsCount").innerText = `Events: ${data.length}`;
   document.getElementById("yearMonthText").innerText = yearMonthValue; // To update
   heat.addTo(layerGroup);
 }
