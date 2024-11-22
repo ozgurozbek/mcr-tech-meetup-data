@@ -11,6 +11,12 @@
     "auth": "Sean O'Mahoney",
     "aURL": "https://twitter.com/Sean12697"
 }, {
+    "name": "Event Heatmap Locations by Sectors",
+    "desc": "Generates a LeafletJS heatmap for the locations of meetup events based on sectors.",
+    "link": "pages/meetup-heatmap-sector/index.html",
+    "auth": "Ozgur Ozbek",
+    "aURL": "https://www.linkedin.com/in/ozgur-ozbek"
+}, {
     "name": "Event Heatmap Locations Timeline",
     "desc": "Using LeafletJS to generate a heatmap to visualize the locations of meetup events.",
     "link": "pages/meetup-heatmap-timeline/index.html",
@@ -24,10 +30,16 @@
     "aURL": "https://twitter.com/Sean12697"
 }, {
     "name": "Venue Usage Graph",
-    "desc": "Graphing the amount of RSVPs ever venue has in a particular month.",
+    "desc": "Graphing the amount of RSVPs every venue has in a particular month.",
     "link": "pages/venue-usage/index.html",
     "auth": "Sean O'Mahoney",
     "aURL": "https://twitter.com/Sean12697"
+}, {
+    "name": "Sector Grouped Online/In-Person Events",
+    "desc": "Graphing the amount of events online or in-person depending on sectors.",
+    "link": "pages/venue-usage-sector/index.html",
+    "auth": "Ozgur Ozbek",
+    "aURL": "https://www.linkedin.com/in/ozgur-ozbek"
 }, {
     "name": "RSVP Treemap",
     "desc": "Visualizing the number of RSVPs Groups & Events have received.",
