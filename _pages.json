@@ -46,4 +46,10 @@
     "link": "pages/rsvp-treemap/index.html",
     "auth": "Sean O'Mahoney",
     "aURL": "https://twitter.com/Sean12697"
+}, {
+    "name": "Sector and Attendee Force Graph",
+    "desc": "Graphing the sector attendees and applying force based on cross-pollination.",
+    "link": "pages/sector-attendee-force-graph/index.html",
+    "auth": "Ozgur Ozbek",
+    "aURL": "https://www.linkedin.com/in/ozgur-ozbek"
 }]
