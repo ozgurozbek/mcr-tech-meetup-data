@@ -53,11 +53,13 @@ let datasets = [{
     name: "Categories",
     count: numberWithCommas(categories.length),
     desc: datasetDesc("./_data/categories.json", "here")
-}, {
-    name: "Sectors",
-    count: numberWithCommas(sectors.length),
-    desc: datasetDesc("./_data/sectors.json", "here")
-}];
+}
+// , {
+//     name: "Sectors",
+//     count: numberWithCommas(sectors.length),
+//     desc: datasetDesc("./_data/sectors.json", "here")
+// }
+];
 
 let pages = require("./_pages.json").map(page => {
     return {
