@@ -6,6 +6,7 @@ const fs = require("fs"),
     events = JSON.parse(fs.readFileSync("_data/events.json", "utf8")),
     attendees = JSON.parse(fs.readFileSync("_data/attendees.json", "utf8")),
     categories = JSON.parse(fs.readFileSync("_data/categories.json", "utf8")),
+    sectors = JSON.parse(fs.readFileSync("_data/sectors.json", "utf8")),
     topics = JSON.parse(fs.readFileSync("_data/topics.json", "utf8")),
     beaut = (obj) => beautify(JSON.stringify(obj), { format: 'json' });
 
@@ -52,7 +53,13 @@ let datasets = [{
     name: "Categories",
     count: numberWithCommas(categories.length),
     desc: datasetDesc("./_data/categories.json", "here")
-}];
+}
+// , {
+//     name: "Sectors",
+//     count: numberWithCommas(sectors.length),
+//     desc: datasetDesc("./_data/sectors.json", "here")
+// }
+];
 
 let pages = require("./_pages.json").map(page => {
     return {
@@ -94,7 +101,7 @@ fs.writeFileSync(`./_site/${globals.slug}.html`, index, () => {});
 
 // Generate Information from Large Data
 fs.readdirSync(`${__dirname}/_scripts`).forEach(script => {
-    let result = require(`${__dirname}/_scripts/${script}`)(groups, events, attendees, categories, topics);
+    let result = require(`${__dirname}/_scripts/${script}`)(groups, events, attendees, categories, topics, sectors);
     let fileName = script.split("/").slice(-1)[0].replace(".js", ".json");
     fs.writeFileSync(`${__dirname}/_site/data/${fileName}`, beaut(result), () => {});
 });

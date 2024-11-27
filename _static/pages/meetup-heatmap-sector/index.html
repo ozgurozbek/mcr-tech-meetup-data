@@ -1,0 +1,24 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sector Heatmap</title>
+    <link rel="stylesheet" href="leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+   	<script language="javascript"src="leaflet.js"></script>    
+    <!-- <script language="javascript" src="accidents.js"></script> -->
+    <script language="javascript" src="leaflet-heat.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div id="controllers">
+        <p id="eventsCount">Events: ...</p>
+        Select sector: <select name="sectors" id="sectors"  onchange="updateSector(this.value)">
+            <option value="">Select sector</option>
+        </select>
+    </div>
+    
+    <div id="map"></div> 
+</body>
+</html>

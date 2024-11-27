@@ -18,6 +18,7 @@ function drawChart() {
 
   var options = {
     title: 'Venue Attendees / Month',
+    subtitle: "Data visualization of venue attendees by months",
     curveType: 'function'
   };
 
